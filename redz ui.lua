@@ -10,7 +10,7 @@ local PlayerMouse = Player:GetMouse()
 
 local redzlib = {
     Themes = {
-        redzHub = {
+        redz = {
             ["Color Hub 1"] = ColorSequence.new({
                 ColorSequenceKeypoint.new(0.00, Color3.fromRGB()),
                 ColorSequenceKeypoint.new(0.50, Color3.fromRGB(5, 5, 5)),
@@ -1556,7 +1556,7 @@ function redzlib:MakeWindow(Configs)
 	function Window:CloseBtn()
 		local Dialog = Window:Dialog({
 			Title = "Are you sure?",
-			Text = "Press "OK" for destroy this ui or press 'Cancle' for hide ui destroy.",
+			Text = "Press 'OK' for destroy this ui or press 'Cancle' for hide ui destroy.",
 			Options = {
 				{"OK", function()
 					ScreenGui:Destroy()
