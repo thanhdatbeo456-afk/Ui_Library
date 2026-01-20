@@ -10,17 +10,17 @@ local PlayerMouse = Player:GetMouse()
 
 local redzlib = {
     Themes = {
-        TuanAnhIOS = {
+        redzHub = {
             ["Color Hub 1"] = ColorSequence.new({
-                ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 30)),
-                ColorSequenceKeypoint.new(0.50, Color3.fromRGB(0, 100, 255)),
-                ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 30))
+                ColorSequenceKeypoint.new(0.00, Color3.fromRGB()),
+                ColorSequenceKeypoint.new(0.50, Color3.fromRGB(5, 5, 5)),
+                ColorSequenceKeypoint.new(1.00, Color3.fromRGB(2, 2, 2))
             }),
-            ["Color Hub 2"] = Color3.fromRGB(10, 20, 40),
-            ["Color Stroke"] = Color3.fromRGB(0, 120, 255),
-            ["Color Theme"] = Color3.fromRGB(50, 150, 255),
-            ["Color Text"] = Color3.fromRGB(200, 230, 255),
-            ["Color Dark Text"] = Color3.fromRGB(120, 170, 210)
+            ["Color Hub 2"] = Color3.fromRGB(20, 20, 20),
+            ["Color Stroke"] = Color3.fromRGB(15, 15, 15),
+            ["Color Theme"] = Color3.fromRGB(255, 20, 200),
+            ["Color Text"] = Color3.fromRGB(255, 255, 255),
+            ["Color Dark Text"] = Color3.fromRGB(200, 200, 200)
         }
     },
 	Info = {
@@ -29,7 +29,7 @@ local redzlib = {
 	Save = {
 		UISize = {550, 380},
 		TabSize = 160,
-		Theme = "TuanAnhIOS"
+		Theme = "redzhub"
 	},
 	Settings = {},
 	Connection = {},
@@ -1555,13 +1555,13 @@ function redzlib:MakeWindow(Configs)
 	local Window, FirstTab = {}, false
 	function Window:CloseBtn()
 		local Dialog = Window:Dialog({
-			Title = "Tuấn Anh IOS",
-			Text = "Mày Tắt Script Của Bố Mày Có Việc Gì Không ?",
+			Title = "Are you sure?",
+			Text = "Press "OK" for destroy this ui or press 'Cancle' for hide ui destroy.",
 			Options = {
-				{"Tắt Ạ", function()
+				{"OK", function()
 					ScreenGui:Destroy()
 				end},
-				{"Không Tắt Ạ"}
+				{"Cancle"}
 			}
 		})
 	end
